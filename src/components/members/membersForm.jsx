@@ -28,7 +28,7 @@ export const MembersForm = ({ members, setHomeState }) => {
     };
     const submitHandler = () => {
         if (!validateForm()) return;
-        setHomeState((prevState) => ({ ...prevState, members: [...prevState.members, memberData] }));
+        setHomeState((prevState) => ({ ...prevState, members: [...prevState.members, { firstName: firstName.trim(), lastName: lastName.trim(), address: address.trim(), ssn }] }));
     }
     const resetHandler = () => {
         resetform();
